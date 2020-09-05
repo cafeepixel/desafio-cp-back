@@ -1,4 +1,4 @@
-![Espaço](https://image.freepik.com/free-vector/spaceship-cockpit-interior-space-planets-view_33099-2159.jpg)
+![Espaço](http://cafeepixel.com.br/assinaturas/logo_color.png)
 # Desafio CP - Backend
 
 A **Café e Pixel** é uma empresa que oferece diversos serviços, desde consultoria de software ao desenvolvimento completo de uma aplicação robusta.
