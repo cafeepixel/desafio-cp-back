@@ -60,6 +60,7 @@ O principal objetivo desse desafio é **disponibilizar uma REST API atendendo ao
 - Escreva no readme do seu projeto uma breve documentação de como rodá-lo localmente
 - Forneça a documentação da sua API
 - O sistema de autenticação é opcional, mas caso seja feito, insira os detalhes de login no readme
+- A API deve retornar um json com os dados solicitados, bem como as respostas de status de sucesso e erro, caso houverem
 - **Todos os commits deverão estar em inglês**
 - **O nome das variáveis internas, funções e métodos da API deve ser escritas em inglês**
 
@@ -70,6 +71,18 @@ O principal objetivo desse desafio é **disponibilizar uma REST API atendendo ao
 - Use boas práticas de programação
 - Utilize os princípios [SOLID](https://en.wikipedia.org/wiki/SOLID)
 - Não se esqueça de ler com atenção aos requerimentos, cada detalhe conta :wink:
+
+
+---
+
+# ❗❗❗ Para os candidatos à vaga de Fullstack ❗❗❗
+
+Caso você esteja concorrendo à vaga de fullstack, **faça a integração da sua API com o desafio de frontend na listagem de livros.**
+
+O fluxo de adicionar o livro ao carrinho será controlado localmente.
+
+
+[Desafio de Frontend](https://github.com/cafeepixel/desafio-cp-front)
 
 
 
