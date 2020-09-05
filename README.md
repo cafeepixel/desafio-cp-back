@@ -1,4 +1,4 @@
-![Espaço](http://cafeepixel.com.br/assinaturas/logo_color.png)
+![Espaço](http://cafeepixel.com.br/assinaturas/logo_color_git.png)
 # Desafio CP - Backend
 
 A **Café e Pixel** é uma empresa que oferece diversos serviços, desde consultoria de software ao desenvolvimento completo de uma aplicação robusta.
