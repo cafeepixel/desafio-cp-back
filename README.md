@@ -27,7 +27,7 @@ Este repositório contém um problema usado para avaliar as skills do candidato.
 3. Faça o deploy do seu projeto em algum serviço de hospedagem (Heroku, Firebase, Netlify, etc);
 4. Ao finalizar uma das entregas, abra **um pull request nesse repositório para cada etapa das entregas** com o título da mesma;
 5. Códigos plagiados serão desclassificados;
-5. Não se preocupe com o PR sendo rejeitado, usaremos ele como referência, mas não podemos fazer o merge para não comprometer a resposta de outros candidatos;
+5. Não se preocupe com o PR sendo rejeitado, usaremos ele como referência, mas não podemos fazer o merge para não comprometer a resposta de outros candidatos.
 
 
 # Especificações - Backend
