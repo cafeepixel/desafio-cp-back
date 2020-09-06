@@ -23,12 +23,13 @@ Observação: Os colchetes não são necessários. O arquivo `.env` não diferen
   - npm start
 6. Ele ficará disponível no link `http://[HOST]:[PORT]`.
 
-## EndPoints
 
 --- 
+## EndPoints
 
-#### http://localhost:[PORT]/books (Reúne todos os livros do banco)
+#### GET http://localhost:[PORT]/books (Reúne todos os livros do banco)
 
+###### Response
 ```
 {
     "message": "success",
@@ -37,7 +38,7 @@ Observação: Os colchetes não são necessários. O arquivo `.env` não diferen
             "id": 1,
             "name": "Kevin Kwan",
             "title": "Crazy rich asians",
-            "description": "the outrageously funny debut novel about three super-rich, pedigreed Chinese families and the gossip...",
+            "description": "the outrageously funny debut novel about... ",
             "imageUrl": "https://m.media-amazon.com/images/I/41Phm14P9IL.jpg",
             "price": 24.1200008392334,
             "priceDiscount": 14.989999771118164,
@@ -48,6 +49,40 @@ Observação: Os colchetes não são necessários. O arquivo `.env` não diferen
     ]
 }
 ```
+---
+#### POST http://localhost:[PORT]/books (Insere um Livro)
 
+###### Request
 
+```
+{
+  "name": "Kevin Kwan",
+  "title": "Crazy rich asians",
+  "description": "the outrageously funny ...the gossip...",
+  "imageUrl": "https://m.media-amazon.com/images/I/41Phm14P9IL.jpg",
+  "price": 24.12,
+  "priceDiscount": 14.15,
+  "stars": 4,
+  "review": "252 review"
+}
+```
+
+###### Response
+```
+{
+  "status": "success",
+  "insertedBook": {
+    "id": 1,
+    "name": "Kevin Kwan",
+    "title": "Crazy rich asians",
+    "description": "the outrageously funny ...the gossip...",
+    "imageUrl": "https://m.media-amazon.com/images/I/41Phm14P9IL.jpg",
+    "price": 24.12,
+    "priceDiscount": 14.15,
+    "stars": 4,
+    "review": "252 review"
+  }
+}
+```
+---
 
