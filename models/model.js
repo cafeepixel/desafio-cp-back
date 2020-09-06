@@ -1,17 +1,7 @@
 const connection = require('./connection');
+const { connect } = require('../controllers/booksController');
 
-const queryAllBooks = `SELECT
-b.id,
-a.name,
-b.title,
-b.description,
-b.image_url,
-b.price,
-b.price_discount,
-b.stars,
-b.review
-FROM books AS b
-INNER JOIN author AS a ON b.author_id = a.id;`
+const queryAllBooks = `SELECT * FROM books`;
 
 const getAllBooks = async () =>
   connection()
@@ -22,8 +12,18 @@ const getAllBooks = async () =>
     .then((books) =>
       books.map(([id, name, title, description, imageUrl, price, priceDiscount, stars, review]) => (
         { id, name, title, description, imageUrl, price, priceDiscount, stars, review }
-      )))
+      )));
+
+const insertBook = async (data) =>
+  connection()
+    .then((session) =>
+      session
+        .getTable('books')
+        .insert([...data])
+        .execute());
+
 
 module.exports = {
   getAllBooks,
+  insertBook,
 }

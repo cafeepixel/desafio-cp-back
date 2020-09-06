@@ -13,7 +13,21 @@ booksRouter
 
 booksRouter
   .post('/', async (req, res) => {
-    
+    const {
+      name,
+      title,
+      description,
+      imageUrl,
+      price,
+      priceDiscount,
+      stars,
+      review,
+    } = req.body;
+
+
+
+    const lastBook = model.getBook()
+
   });
 
 module.exports = booksRouter;
