@@ -27,7 +27,7 @@ export class BookController{
             let books;
 
             if(req.query.title){
-                books = await bookDatabase.searchByTitle(title);
+                books = await bookDatabase.searchByTitle(req.query.title);
             }
 
             else{
