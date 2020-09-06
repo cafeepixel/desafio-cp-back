@@ -86,3 +86,21 @@ Observação: Os colchetes não são necessários. O arquivo `.env` não diferen
 ```
 ---
 
+### DELETE http://localhost:[PORT]/books (Apaga um Livro pelo título)
+
+###### Request
+```
+{
+  "title": "Crazy rich asians"
+}
+
+```
+
+###### Response
+```
+{
+  "message": "successfully deleted",
+  "bookTitle": "Crazy rich asians"
+}
+```
+
