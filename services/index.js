@@ -1,5 +1,6 @@
-const { validBook } = require('./JoiSchema');
+const { validBook, validTitle } = require('./JoiSchema');
 
 module.exports = {
   validBook,
+  validTitle,
 };

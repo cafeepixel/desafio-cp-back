@@ -25,7 +25,7 @@ const insertBook = async (data) =>
         .execute()
     );
 
-const queryOneBook = "SELECT * FROM books WHERE title = ?"
+const queryOneBook = "SELECT * FROM books WHERE title = ?";
 
 const getBook = (title) =>
   connection()
@@ -38,11 +38,20 @@ const getBook = (title) =>
     .then((book) => {
       const [id, name, title, description, imageUrl, price, priceDiscount, stars, review] = book[0];
       return { id, name, title, description, imageUrl, price, priceDiscount, stars, review };
-    })
+    });
 
+const deleteQuery = "DELETE FROM books WHERE title = ?";
+
+const deleteBook = (title) =>
+  connection()
+    .then((session) =>
+      session.sql(deleteQuery)
+        .bind(title)
+        .execute());
 
 module.exports = {
   getAllBooks,
   insertBook,
+  deleteBook,
   getBook,
 }

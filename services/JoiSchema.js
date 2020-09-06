@@ -35,4 +35,11 @@ const validBook = Joi.object({
     .required(),
 });
 
-module.exports = { validBook };
+const validTitle = Joi.object({
+  title: Joi
+    .string()
+    .min(2)
+    .required(),
+})
+
+module.exports = { validBook, validTitle };
