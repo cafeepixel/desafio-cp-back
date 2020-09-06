@@ -13,7 +13,7 @@ Para utilizá-la localmente, veja o passo a passo:
 4. Crie um arquivo com o nome `.env` na raiz do projeto com a seguinte estrutura:
   - PORT=[Porta onde a API ficará disponível, geralmente se usa a porta 3000]
   - PASSWORD=[Senha do seu banco de dados]
-  - USER=[Usuário do seu banco de dados, geralmente se é utilizado root]
+  - DBUSER=[Usuário do seu banco de dados, geralmente se é utilizado root]
   - HOST=[Endereço que será disponibilizado juntamente com a porta, geralmente utilizado como localhost]
   - DBPORT=[Porta onde o acesso ao banco de dados está disponível, geralmente utilizada a porta 33060]
   
@@ -25,4 +25,4 @@ Observação: Os colchetes não são necessários. O arquivo `.env` não diferen
 
 ## EndPoints
 
-...Em construção...
+

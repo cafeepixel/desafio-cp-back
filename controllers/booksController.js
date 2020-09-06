@@ -5,10 +5,10 @@ const model = require('../models');
 booksController
   .get('/', async (_req, res) => {
     const allBooks = await model.getAllBooks();
-    res.status(200).json({
+    return res.status(200).json({
       message: 'success',
       books: allBooks,
-    })
+    });
   });
 
 module.exports = booksController;
