@@ -27,7 +27,7 @@ Observação: Os colchetes não são necessários. O arquivo `.env` não diferen
 
 --- 
 
-#### http://localhost:[PORT]/books
+#### http://localhost:[PORT]/books (Reúne todos os livros do banco)
 
 ```
 {
