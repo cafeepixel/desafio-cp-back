@@ -8,25 +8,24 @@ exports.details = (req, res) => {
     res.send({type: `GET`});
 };
 
-exports.add = (req, res) => {
-    Books.create(req.body).then((pi) => {
-        res.json(Books);
-    });
+exports.add = (req, res, next) => {
+    Books.create(req.body).then((books) => {
+        res.send(books);
+    }).catch(next);
 };
 
-exports.update = (req, res) => {
-    res.send({type: `PUT`});
+exports.update = (req, res, next) => {
+    Books.findByIdAndUpdate({_id:req.params.id}, req.body)
+    .then(() => {
+        Books.findOne({_id: req.params.id}).then((books) => {
+            res.send(books);
+            console.log('ID: ' + req.params.id + " Atualizado no BD")
+        });
+    }).catch(next, console.log(next));
 };
 
-exports.delete = (req, res) => {
-    res.send({type: `DELETE`});
+exports.delete = (req, res, next) => {
+    Books.findByIdAndRemove({_id:req.params.id}).then((books) => {
+        res.send(books);
+    }).catch(next);
 };
-
-exports.create = (req, res) => {
-    console.log(`You made a POST request: `, req.body);
-    res.send({
-        type: `POST`,
-        name: req.body.name,
-        rank: req.body.rank
-    });
-}
