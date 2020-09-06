@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express();
-const port = 8081;
+const port = process.env.PORT || 8081;
 const bodyParser = require(`body-parser`);
 const mongoose = require(`mongoose`);
 
@@ -11,7 +11,7 @@ mongoose.connection.on(`connected`, () => {
 });
 
 mongoose.connection.on(`error`, (err) => {
-    console.log(`Database error` + err);
+    console.log(`Database error - ` + err);
 });
 
 app.use(bodyParser.json());
@@ -29,6 +29,6 @@ app.use((err, req, res, next) => {
     res.status(422).send({error: err.message});
 });
 
-app.listen(process.env.port || port, () => {
+app.listen(port, () => {
     console.log('server is running on port ' + port)
 })
