@@ -4,14 +4,17 @@ exports.test = (req, res) => {
     res.send("Teste no controller");    
 }
 
-exports.details = (req, res) => {
-    res.send({type: `GET`});
+exports.list = (req, res, next) => {
+    Books.find().then((books) =>{
+        res.send(books);
+        console.log("A list request was happen")
+    }).catch(next);
 };
 
 exports.add = (req, res, next) => {
     Books.create(req.body).then((books) => {
         res.send(books);
-        console.log('ID: ' + req.params.id + " inserted on Database")
+        console.log(" A new item was inserted on Database");
     }).catch(next);
 };
 
@@ -20,7 +23,7 @@ exports.update = (req, res, next) => {
     .then(() => {
         Books.findOne({_id: req.params.id}).then((books) => {
             res.send(books);
-            console.log('ID: ' + req.params.id + " updated on Database")
+            console.log('ID: ' + req.params.id + " was updated on Database");
         });
     }).catch(next);
 };
@@ -28,6 +31,6 @@ exports.update = (req, res, next) => {
 exports.delete = (req, res, next) => {
     Books.findByIdAndRemove({_id:req.params.id}).then((books) => {
         res.send(books);
-        console.log('ID: ' + req.params.id + " removed from Database")
+        console.log('ID: ' + req.params.id + " was removed from Database");
     }).catch(next);
 };

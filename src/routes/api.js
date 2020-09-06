@@ -4,12 +4,12 @@ const Controller = require('../controllers/Controller');
 
 router.get('/teste', Controller.test);
 
-router.get(`/details`, Controller.details);
+router.get(`/list`, Controller.list);
 
-router.post(`/interest`, Controller.add);
+router.post(`/add`, Controller.add);
 
-router.put(`/interest/:id`, Controller.update);
+router.put(`/update/:id`, Controller.update);
 
-router.delete(`/interest/:id`, Controller.delete);
+router.delete(`/delete/:id`, Controller.delete);
 
 module.exports = router;
