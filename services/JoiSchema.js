@@ -35,4 +35,4 @@ const validBook = Joi.object({
     .required(),
 });
 
-module.exports = validBook;
+module.exports = { validBook };

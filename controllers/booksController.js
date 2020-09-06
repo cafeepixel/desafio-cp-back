@@ -1,6 +1,8 @@
 const express = require('express');
-const booksRouter = express.Router();
 const model = require('../models');
+const middlewares = require('../middlewares');
+
+const booksRouter = express.Router();
 
 booksRouter
   .get('/', async (_req, res) => {
@@ -12,7 +14,7 @@ booksRouter
   });
 
 booksRouter
-  .post('/', async (req, res) => {
+  .post('/', middlewares.isValidBook, async (req, res) => {
     const {
       name,
       title,
@@ -24,10 +26,24 @@ booksRouter
       review,
     } = req.body;
 
+    await model.insertBook({
+      name,
+      title,
+      description,
+      imageUrl,
+      price,
+      priceDiscount,
+      stars,
+      review,
+    });
 
+    const lastBook = await model.getBook(title);
+    console.log(lastBook);
 
-    const lastBook = model.getBook()
-
+    return res.status(200).json({
+      status: 'success',
+      insertedBook: lastBook,
+    });
   });
 
 module.exports = booksRouter;
