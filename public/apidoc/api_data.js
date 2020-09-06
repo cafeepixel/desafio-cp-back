@@ -1,0 +1,242 @@
+define({ "api": [
+  {
+    "type": "",
+    "url": "{delete}",
+    "title": "",
+    "group": "App",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Mensagem de endpoint inválido</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Sucesso",
+          "content": "HTTP/1.1 200 OK\nInvalid End Point",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "src/app.js",
+    "groupTitle": "App",
+    "name": "Delete"
+  },
+  {
+    "type": "",
+    "url": "{get}",
+    "title": "",
+    "group": "App",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Mensagem de endpoint inválido</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Sucesso",
+          "content": "HTTP/1.1 200 OK\nInvalid End Point",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "src/app.js",
+    "groupTitle": "App",
+    "name": "Get"
+  },
+  {
+    "type": "",
+    "url": "{post}",
+    "title": "",
+    "group": "App",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Mensagem de endpoint inválido</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Sucesso",
+          "content": "HTTP/1.1 200 OK\nInvalid End Point",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "src/app.js",
+    "groupTitle": "App",
+    "name": "Post"
+  },
+  {
+    "type": "",
+    "url": "{put}",
+    "title": "",
+    "group": "App",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Mensagem de endpoint inválido</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Sucesso",
+          "content": "HTTP/1.1 200 OK\nInvalid End Point",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "src/app.js",
+    "groupTitle": "App",
+    "name": "Put"
+  },
+  {
+    "type": "",
+    "url": "{delete}",
+    "title": "",
+    "group": "Controller",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Retorno com o item excluído</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Sucesso",
+          "content": " HTTP/1.1 200 OK\n{\n    \"_id\": \"5f552c77c293421ca857e325\",\n    \"title\": \"A Songs of Ice and Fire - Book 1 - A Game of Thrones\",\n    \"author\": \"George RR Martin\",\n    \"synopsis\": \"Upon the death of Lord Jon Arryn, the principal advisor to King Robert Baratheon, Robert recruits his childhood friend Eddard 'Ned' Stark, now lord of the North, to replace Arryn as 'Hand of the King', and to betroth his daughter Sansa to Robert's son Joffrey. Ned accepts the position when he learns that Arryn's widow Lysa believes he was poisoned by Robert's wife Queen Cersei Lannister and her family.\",\n    \"price\": 24.99,\n    \"frontPage\": \"teste\",\n    \"rating\": 5,\n    \"__v\": 0\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "src/controllers/Controller.js",
+    "groupTitle": "Controller",
+    "name": "Delete"
+  },
+  {
+    "type": "",
+    "url": "{get}",
+    "title": "",
+    "group": "Controller",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Retorno de lista com todos os itens da collection</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Sucesso",
+          "content": " HTTP/1.1 200 OK\n [{\n    \"_id\": \"5f552c77c293421ca857e325\",\n    \"title\": \"A Songs of Ice and Fire - Book 1 - A Game of Thrones\",\n    \"author\": \"George RR Martin\",\n    \"synopsis\": \"Upon the death of Lord Jon Arryn, the principal advisor to King Robert Baratheon, Robert recruits his childhood friend Eddard 'Ned' Stark, now lord of the North, to replace Arryn as 'Hand of the King', and to betroth his daughter Sansa to Robert's son Joffrey. Ned accepts the position when he learns that Arryn's widow Lysa believes he was poisoned by Robert's wife Queen Cersei Lannister and her family.\",\n    \"price\": 24.99,\n    \"frontPage\": \"teste\",\n    \"rating\": 5,\n    \"__v\": 0\n},...\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "src/controllers/Controller.js",
+    "groupTitle": "Controller",
+    "name": "Get"
+  },
+  {
+    "type": "",
+    "url": "{post}",
+    "title": "",
+    "group": "Controller",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Retorno do item cadastrado + ID do BD</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Sucesso",
+          "content": " HTTP/1.1 200 OK\n {\n    \"_id\": \"5f552c77c293421ca857e325\",\n    \"title\": \"A Songs of Ice and Fire - Book 1 - A Game of Thrones\",\n    \"author\": \"George RR Martin\",\n    \"synopsis\": \"Upon the death of Lord Jon Arryn, the principal advisor to King Robert Baratheon, Robert recruits his childhood friend Eddard 'Ned' Stark, now lord of the North, to replace Arryn as 'Hand of the King', and to betroth his daughter Sansa to Robert's son Joffrey. Ned accepts the position when he learns that Arryn's widow Lysa believes he was poisoned by Robert's wife Queen Cersei Lannister and her family.\",\n    \"price\": 24.99,\n    \"frontPage\": \"teste\",\n    \"rating\": 5,\n    \"__v\": 0\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "src/controllers/Controller.js",
+    "groupTitle": "Controller",
+    "name": "Post"
+  },
+  {
+    "type": "",
+    "url": "{put}",
+    "title": "",
+    "group": "Controller",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Retorno do item atualizado</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Sucesso",
+          "content": " HTTP/1.1 200 OK\n{\n    \"_id\": \"5f552c77c293421ca857e325\",\n    \"title\": \"A Songs of Ice and Fire - Book 1 - A Game of Thrones\",\n    \"author\": \"George RR Martin\",\n    \"synopsis\": \"Upon the death of Lord Jon Arryn, the principal advisor to King Robert Baratheon, Robert recruits his childhood friend Eddard 'Ned' Stark, now lord of the North, to replace Arryn as 'Hand of the King', and to betroth his daughter Sansa to Robert's son Joffrey. Ned accepts the position when he learns that Arryn's widow Lysa believes he was poisoned by Robert's wife Queen Cersei Lannister and her family.\",\n    \"price\": 24.99,\n    \"frontPage\": \"teste\",\n    \"rating\": 5,\n    \"__v\": 0\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "src/controllers/Controller.js",
+    "groupTitle": "Controller",
+    "name": "Put"
+  }
+] });
