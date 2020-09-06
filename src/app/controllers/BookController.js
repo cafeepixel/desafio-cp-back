@@ -23,13 +23,21 @@ class BookController {
     async index(request, response) {
         const { title } = request.query;
 
-        const books = title? await Book.findOne({where: {title}}) : await Book.findAll();
+        const books = title ? await Book.findOne({ where: { title } }) : await Book.findAll();
 
         if (!books) {
             return response.status(400).json({ error: 'Book not found.' });
         }
 
         return response.json(books);
+    }
+
+    async delete(request, response) {
+        const { id } = request.params;
+
+        await Book.destroy({ where: { id } });
+
+        return response.send();
     }
 }
 
