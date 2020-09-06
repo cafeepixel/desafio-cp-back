@@ -21,8 +21,33 @@ Observação: Os colchetes não são necessários. O arquivo `.env` não diferen
 
 5. Execute o projeto
   - npm start
-6. Ele ficará disponível no link `http://localhost:[PORT]`.
+6. Ele ficará disponível no link `http://[HOST]:[PORT]`.
 
 ## EndPoints
+
+--- 
+
+#### http://localhost:[PORT]/books
+
+```
+{
+    "message": "success",
+    "books": [
+        {
+            "id": 1,
+            "name": "Kevin Kwan",
+            "title": "Crazy rich asians",
+            "description": "the outrageously funny debut novel about three super-rich, pedigreed Chinese families and the gossip...",
+            "imageUrl": "https://m.media-amazon.com/images/I/41Phm14P9IL.jpg",
+            "price": 24.1200008392334,
+            "priceDiscount": 14.989999771118164,
+            "stars": 4,
+            "review": "252 review"
+        },
+        ...
+    ]
+}
+```
+
 
 
