@@ -5,7 +5,7 @@
 
 - Clonar o repositório
 - Configurar as variáveis de ambiente (colocar informações sobre seu banco), sendo elas:
-    - APP_PORT=PORTA_DA_APLICAÇÃO
+    - PORT=PORTA_DA_APLICAÇÃO
     - DB_USER=USUÁRIO_DO_SEU_BANCO
     - DB_PASSWORD=SENHA_DO_SEU_BANCO
     - DB_HOST=HOST_DO_SEU_BANCO

@@ -13,7 +13,7 @@ app.use(express.json());
 
 app.use(routes);
 
-const server = app.listen(process.env.APP_PORT || 3000, ()=>{
+const server = app.listen(process.env.PORT || 3000, ()=>{
     if(server){
         const address = server.address()
         console.log(`Server is running in http://localhost:${address.port}`);
