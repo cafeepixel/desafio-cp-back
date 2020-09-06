@@ -51,9 +51,8 @@ booksRouter
   .delete('/', middlewares.isValidTitle, async (req, res) => {
     const { title } = req.body;
     const existsTitle = await model.getBook(title);
-    console.log(existsTitle);
 
-    if (!existsTitle) {
+    if (!existsTitle.id) {
       return res.status(404).json({
         error: 'Book not found',
         code: 'not_found'
@@ -66,7 +65,24 @@ booksRouter
       message: 'successfully deleted',
       bookTitle: title,
     });
+  });
 
+booksRouter
+  .post('/search', middlewares.isValidTitle, async (req, res) => {
+    const { title } = req.body;
+    const book = await model.getBook(title);
+
+    if (!book.id) {
+      return res.status(404).json({
+        error: 'Book not found',
+        code: 'not_found'
+      });
+    }
+
+    return res.status(200).json({
+      message: "success",
+      book,
+    });
   });
 
 module.exports = booksRouter;

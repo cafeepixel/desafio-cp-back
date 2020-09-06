@@ -38,7 +38,8 @@ const getBook = (title) =>
     .then((book) => {
       const [id, name, title, description, imageUrl, price, priceDiscount, stars, review] = book[0];
       return { id, name, title, description, imageUrl, price, priceDiscount, stars, review };
-    });
+    })
+    .catch((err) => err.message);
 
 const deleteQuery = "DELETE FROM books WHERE title = ?";
 
