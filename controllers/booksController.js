@@ -1,8 +1,8 @@
 const express = require('express');
-const booksController = express.Router();
+const booksRouter = express.Router();
 const model = require('../models');
 
-booksController
+booksRouter
   .get('/', async (_req, res) => {
     const allBooks = await model.getAllBooks();
     return res.status(200).json({
@@ -11,4 +11,9 @@ booksController
     });
   });
 
-module.exports = booksController;
+booksRouter
+  .post('/', async (req, res) => {
+
+  });
+
+module.exports = booksRouter;
