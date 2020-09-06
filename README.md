@@ -1,92 +1,125 @@
-![Logo](http://cafeepixel.com.br/assinaturas/logo_color_git.png)
-# Desafio CP - Backend
+![](https://camo.githubusercontent.com/6c4c6991a73a486355072256b304cc6a61b97fd6/687474703a2f2f6361666565706978656c2e636f6d2e62722f617373696e6174757261732f6c6f676f5f636f6c6f725f6769742e706e67)
+#  ☕ Desafio Backend CP
 
-A **Café e Pixel** é uma empresa que oferece diversos serviços, desde consultoria de software ao desenvolvimento completo de uma aplicação robusta.
+Objetivo desenvolver uma REST API com as seguintes funcionalidades:
+- O usuário pode adicionar um livro
+- O usuário pode listar os livros cadastrados
+- O usuário pode deletar os livros cadastrados
+- O usuário pode buscar os livros pelo título
 
-Nossos desenvolvedores buscam estar sempre em aprendizado contínuo, pois amam o que fazem. Nossos processos de desenvolvimento ágil e nossa busca por melhores práticas de desenvolvimento nos proporcionam um ótimo ambiente para profissionais que gostam de criar softwares de qualidade em boa companhia.
+A aplicação está __publicada__ no heroku no endereço:
+[https://api-desafio-cb.herokuapp.com](https://api-desafio-cb.herokuapp.com)
 
-Estamos sempre procurando por profissionais que gostam de otimizar seu trabalho, por isso damos preferência a times pequenos com profissionais qualificados, ao invés de times grandes com profissionais medianos.
+## 🚀 Executando locamente
 
-Este repositório contém um problema usado para avaliar as skills do candidato. É importante ressaltar que resolver o desafio de forma satisfatória é apenas parte do que será avaliado. Nós consideramos disciplinas como documentação, testing, linha do tempo dos commits, tempo de entrega e melhores práticas de design e desenvolvimento.
+Faça um clone do repositório do github
 
-### Dicas
+`$ git clone https://github.com/abnerborgonha/desafio-cp-back.git`
 
-- Leia cuidadosamente as especificações. Se não compreender algo, sinta-se livre para falar com a gente;
-- Observe as recomendações e materiais de referência;
-- Apreciamos a simplicidade, então defina bem o setup do projeto para nos auxiliar na sua avaliação;
-- Se possível faça testes, eles fazem do mundo um lugar melhor :D
+Acesse a pasta que foi criada
 
-## Como participar
+`$  cd .\desafio-cp-back\ `
 
-1. Faça um fork desse repositório no github e adicione permissão de leitura para **todos** os usuários abaixo:
-- [Marcelo](https://github.com/marcelomoreles)
-- [Édipo](http://github.com/shuhikari)
-- [Jailton](https://github.com/jlandim)
-- [Manoel](https://github.com/Manogel)
+Execute o comando para poder instalar os pacotes baixados
 
-2. Siga as instruções do README.md (este arquivo);
-3. Faça o deploy do seu projeto em algum serviço de hospedagem (Heroku, Firebase, Netlify, etc);
-4. Ao finalizar uma das entregas, abra **um pull request nesse repositório para cada etapa das entregas** com o título da mesma;
-5. Códigos plagiados serão desclassificados;
-5. Não se preocupe com o PR sendo rejeitado, usaremos ele como referência, mas não podemos fazer o merge para não comprometer a resposta de outros candidatos.
+`$  yarn `
 
-## Prazo para entrega
-O projeto deverá ser entregue até 20:00 de domingo (06/09).
+Executando a aplicação
 
-# Especificações - Backend
-
-Você deve implementar um CRUD básico de uma loja de livros.
-
-O principal objetivo desse desafio é **disponibilizar uma REST API atendendo aos seguintes requerimentos:**
+`$  yarn start `
 
 
-### 1. Histórias
-1. O usuário pode adicionar um livro
-2. O usuário pode listar os livros cadastrados
-3. O usuário pode deletar os livros cadastrados
-4. O usuário pode buscar os livros pelo título
+## 📝 Documentação
 
-### 2. Definições
-**Livro**
-- Título
-- Autor
-- Sinopse
-- Preço
-- Imagem de capa
-- Avaliação
+### Status 
+`200`   Quando a requisição foi feita com sucesso
 
+`400`   Quando houve algum problema nos dados enviados pelo cliente
 
-### 3. Requerimentos do projeto
+### Listar todos os livros
+`GET` : <https://api-desafio-cb.herokuapp.com/book>
 
-- Deixar a aplicação disponível online (Heroku, Firebase, ou outro de sua preferência);
-- A aplicação deve ser escrita usando `nodejs`;
-- Escreva no readme do seu projeto uma breve documentação de como rodá-lo localmente;
-- Forneça a documentação da sua API;
-- O sistema de autenticação é opcional, mas caso seja feito, insira os detalhes de login no readme;
-- A API deve retornar um json com os dados solicitados, bem como as respostas de status de sucesso e erro, caso houverem;
-- **Todos os commits deverão estar em inglês**;
-- **O nome das variáveis internas, funções e métodos da API deve ser escritas em inglês**.
+`RETURN` :
+```javascript 
+[
+  {
+    id: 1,
+    title: "Código Limpo",
+    author: "Robert C. Martin",
+    synopsis: "Mesmo um código ruim pode funcionar. Mas se ele não for limpo, pode acabar com uma empresa de desenvolvimento. Perdem-se a cada ano horas incontáveis e recursos importantes devido a um código mal escrito.",
+    price: 87,
+    cover_image: "https://books.google.com.br/books?id=GXWkDwAAQBAJ&printsec=frontcover&hl=pt-BR&source=gbs_ge_summary_r&cad=0",
+    evaluation: 5,
+    createdAt: "2020-09-06T01:54:44.893Z",
+    updatedAt: "2020-09-06T01:54:44.893Z"
+  },
+  {
+    id: 3,
+    title: "Arquitetura Limpa",
+    author: "Robert C. Martin",
+    synopsis: "Mesmo um código ruim pode funcionar. Mas se ele não for limpo, pode acabar com uma empresa de desenvolvimento. Perdem-se a cada ano horas incontáveis e recursos importantes devido a um código mal escrito.",
+    price: 87,
+    cover_image: "https://books.google.com.br/books?id=GXWkDwAAQBAJ&printsec=frontcover&hl=pt-BR&source=gbs_ge_summary_r&cad=0",
+    evaluation: 5,
+    createdAt: "2020-09-06T02:26:47.951Z",
+    updatedAt: "2020-09-06T02:26:47.951Z"
+  }
 
+```
 
-# Recomendações
+### Listar filtrando pelo titulo
+`GET` : <https://api-desafio-cb.herokuapp.com/books?title=Arquitetura%20Limpa>
+`PARAM` : ` ?title=Arquitetura Limpa`
+`RETURN` :
+```javascript 
 
-- Escreva testes;
-- Use boas práticas de programação;
-- Utilize os princípios [SOLID](https://en.wikipedia.org/wiki/SOLID);
-- Não se esqueça de ler com atenção aos requerimentos, cada detalhe conta :wink:.
+  id: 3,
+  title: "Arquitetura Limpa",
+  author: "Robert C. Martin",
+  synopsis: "Mesmo um código ruim pode funcionar. Mas se ele não for limpo, pode acabar com uma empresa de desenvolvimento. Perdem-se a cada ano horas incontáveis e recursos importantes devido a um código mal escrito.",
+  price: 87,
+  cover_image: "https://books.google.com.br/books?id=GXWkDwAAQBAJ&printsec=frontcover&hl=pt-BR&source=gbs_ge_summary_r&cad=0",
+  evaluation: 5,
+  createdAt: "2020-09-06T02:26:47.951Z",
+  updatedAt: "2020-09-06T02:26:47.951Z"
+}
+```
 
+### Cadastrar um livro
+`POST` : <https://api-desafio-cb.herokuapp.com/book>
 
----
+`BODY` :
+```javascript 
+{
+	title:"Arquitetura Limpa",
+	author: "Robert C. Martin",
+	synopsis: "Mesmo um código ruim pode funcionar. Mas se ele não for limpo, pode acabar com uma empresa de desenvolvimento. Perdem-se a cada ano horas incontáveis e recursos importantes devido a um código mal escrito.",
+	price: 87,
+	cover_image: "https://books.google.com.br/books?id=GXWkDwAAQBAJ&printsec=frontcover&hl=pt-BR&source=gbs_ge_summary_r&cad=0",
+	evaluation: 5
+}
+```
+`RETURN` : 
+```javascript 
+{
+  book: {
+    id: 5,
+    title: "Arquitetura Limpa 2",
+    author: "Robert C. Martin",
+    synopsis: "Mesmo um código ruim pode funcionar. Mas se ele não for limpo, pode acabar com uma empresa de desenvolvimento. Perdem-se a cada ano horas incontáveis e recursos importantes devido a um código mal escrito.",
+    price: 87,
+    cover_image: "https://books.google.com.br/books?id=GXWkDwAAQBAJ&printsec=frontcover&hl=pt-BR&source=gbs_ge_summary_r&cad=0",
+    evaluation: 5,
+    updatedAt: "2020-09-06T18:25:30.061Z",
+    createdAt: "2020-09-06T18:25:30.061Z"
+  }
+}
+```
 
-# ❗❗❗ Para os candidatos à vaga de Fullstack ❗❗❗
+### Deletar um livro
+`DELETE` : <https://api-desafio-cb.herokuapp.com/book/2>
 
-Caso você esteja concorrendo à vaga de fullstack, **faça a integração da sua API com o desafio de frontend na listagem de livros.**
+`PARAM` : ` /:id`
 
-O fluxo de adicionar o livro ao carrinho será controlado localmente.
-
-
-[Desafio de Frontend](https://github.com/cafeepixel/desafio-cp-front)
-
-
-
+`RETURN` : `SATUS CODE 200`
 
