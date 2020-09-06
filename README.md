@@ -104,3 +104,30 @@ Observação: Os colchetes não são necessários. O arquivo `.env` não diferen
 }
 ```
 
+### POST http://localhost:[PORT]/books/search (Busca um livro pelo título)
+
+###### Request
+
+```
+{
+  "title": "Educated"
+}
+```
+
+###### Response
+```
+{
+  "message": "success",
+  "book": {
+    "id": 4,
+    "name": "Tara Westover",
+    "title": "Educated",
+    "description": "It is a tale of fierce family loyalty and of the grief that comes with severing the closest of ties. With...",
+    "imageUrl": "https://miro.medium.com/max/4922/1*Yd4GVE9k8_AIjlki6Z38eA@2x.jpeg",
+    "price": 34.20000076293945,
+    "priceDiscount": 12.680000305175781,
+    "stars": 4.199999809265137,
+    "review": "364 review"
+  }
+}
+```
