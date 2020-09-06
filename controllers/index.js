@@ -1,5 +1,5 @@
-const usersRouter = require('./usersController');
+const booksRouter = require('./booksController');
 
 module.exports = {
-  usersRouter,
+  booksRouter,
 }
