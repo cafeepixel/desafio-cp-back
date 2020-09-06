@@ -7,7 +7,7 @@ Neste repositório há uma API de livros que realiza um CRUD completo.
 Para utilizá-la localmente, veja o passo a passo:
 
 1. Clone o repositório
-2. Execute a Seed do banco que está na raiz do projeto
+2. Execute a Seed do banco que está na raiz do projeto no seu banco de dados
 3. Instale as dependências:
   - npm install
 4. Crie um arquivo com o nome `.env` na raiz do projeto com a seguinte estrutura:
