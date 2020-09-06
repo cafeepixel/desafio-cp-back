@@ -22,9 +22,17 @@ export class BookController{
         }
     }
 
-    async getAllBooks(req, res){
+    async getBooks(req, res){
         try {
-            const books = await bookDatabase.getAllBooks();
+            let books;
+
+            if(req.query.title){
+                books = await bookDatabase.searchByTitle(title);
+            }
+
+            else{
+                books = await bookDatabase.getAllBooks();
+            }
 
             res.status(200).send({books});
         } catch (error) {
@@ -43,18 +51,6 @@ export class BookController{
             await bookDatabase.deleteBook(validate.value.id);
 
             res.sendStatus(200);
-        } catch (error) {
-            res.status(400).send({message: error.message});
-        }
-    }
-
-    async searchByTitle(req, res){
-        try {
-            const {title} = req.query;
-
-            const books = await bookDatabase.searchByTitle(title);
-
-            res.status(200).send({books});
         } catch (error) {
             res.status(400).send({message: error.message});
         }

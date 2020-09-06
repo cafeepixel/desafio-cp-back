@@ -6,7 +6,7 @@ const createBookSchema = Joi.object({
     synopsis: Joi.string().required(),
     price: Joi.number().required(),
     image: Joi.string().required(),
-    rating: Joi.number().required()
+    rating: Joi.number().required().min(0).max(5)
 })
 
 const deleteBookSchema = Joi.object({

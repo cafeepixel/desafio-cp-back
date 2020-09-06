@@ -5,9 +5,8 @@ const routes = express.Router();
 
 const bookController = new BookController;
 
+routes.get('/', bookController.getBooks);
 routes.post('/create', bookController.createBook);
-routes.get('/all', bookController.getAllBooks);
 routes.delete('/:id', bookController.deleteBook);
-routes.get('/search', bookController.searchByTitle)
 
 export {routes};
