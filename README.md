@@ -3,7 +3,7 @@
 
 ### Documentação da API
 
-[Desafio CP API](https://web.postman.co/collections/11225592-488add05-8adc-4d50-bc9c-4e7c3432e083?version=latest&workspace=023f721b-0834-4df4-8481-8a8a8039e24a)
+[Desafio CP API](https://documenter.getpostman.com/view/11225592/TVCiUn24)
 
 
 ### Rodando a aplicação localmente
